@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,60 +8,79 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   body { font-family: 'Cairo', sans-serif; }
+  .btn-download { transition: all 0.3s ease; }
+  .btn-download:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .feature-card { transition: all 0.4s ease; }
+  .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
 </style>
 </head>
-<body class="bg-white text-black transition-colors duration-500"><header class="flex justify-between items-center p-6 max-w-6xl mx-auto">
+<body class="bg-gradient-to-b from-white to-gray-100 text-black transition-colors duration-500">
+
+<header class="flex justify-between items-center p-6 max-w-6xl mx-auto">
   <div class="flex items-center gap-3">
-    <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
-      <span class="font-bold text-white">Z</span>
+    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+      <span class="font-bold text-white text-xl">Z</span>
     </div>
-    <h1 class="text-2xl font-bold">ZadyIQ</h1>
+    <h1 class="text-3xl font-bold">ZadyIQ</h1>
   </div>
   <button id="theme-toggle" class="rounded-2xl border px-3 py-1">🌙</button>
-</header><section class="text-center py-20 px-6">
-  <h2 class="text-4xl md:text-6xl font-extrabold mb-6">تطبيق التسوق الالكتروني الاول في الرمادي</h2>
-  <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 opacity-80">
-    ZadyIQ هو تطبيق توصيل وشراء المنتجات الغذائية بكل سهولة. اطلب احتياجاتك اليومية من السوبرماركت والمتاجر المحلية في الرمادي واستلمها حتى باب منزلك بسرعة وأمان.
-  </p>
-  <div id="download-area"></div>
-</section><section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
-  <div class="rounded-2xl shadow-lg p-6 text-center">
+</header>
+
+<section class="text-center py-20 px-6 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80');">
+  <div class="bg-black bg-opacity-50 p-10 rounded-xl">
+    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 text-white">تطبيق التسوق الالكتروني الاول في الرمادي</h2>
+    <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-200">
+      ZadyIQ هو تطبيق توصيل وشراء المنتجات الغذائية بكل سهولة. اطلب احتياجاتك اليومية من السوبرماركت والمتاجر المحلية في الرمادي واستلمها حتى باب منزلك بسرعة وأمان.
+    </p>
+    <div id="download-area"></div>
+  </div>
+</section>
+
+<section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8">
+  <div class="feature-card rounded-2xl shadow-lg p-6 text-center bg-white">
     <h3 class="text-xl font-bold mb-3">توصيل سريع</h3>
     <p class="opacity-70">خدمة توصيل سريعة داخل الرمادي مع متابعة الطلب لحظة بلحظة.</p>
   </div>
-  <div class="rounded-2xl shadow-lg p-6 text-center">
+  <div class="feature-card rounded-2xl shadow-lg p-6 text-center bg-white">
     <h3 class="text-xl font-bold mb-3">متاجر متعددة</h3>
     <p class="opacity-70">تسوق من عدة متاجر غذائية وسوبرماركت داخل تطبيق واحد.</p>
   </div>
-  <div class="rounded-2xl shadow-lg p-6 text-center">
+  <div class="feature-card rounded-2xl shadow-lg p-6 text-center bg-white">
     <h3 class="text-xl font-bold mb-3">دفع آمن</h3>
     <p class="opacity-70">خيارات دفع متعددة وآمنة مع حماية كاملة لبيانات المستخدم.</p>
   </div>
-</section><section class="max-w-4xl mx-auto px-6 py-16">
+</section>
+
+<section class="max-w-4xl mx-auto px-6 py-16">
   <h2 class="text-3xl font-bold mb-6 text-center">سياسة الخصوصية</h2>
   <p class="opacity-80 leading-8">
     نحن في ZadyIQ نحترم خصوصيتك. نقوم بجمع البيانات الضرورية فقط لإتمام عمليات الشراء والتوصيل وتحسين تجربة المستخدم. لا نقوم بمشاركة معلوماتك الشخصية مع أي طرف ثالث دون موافقتك، ويتم تخزين البيانات باستخدام أنظمة حماية متقدمة لضمان الأمان.
   </p>
-</section><footer class="text-center py-8 border-t border-gray-200">
+</section>
+
+<footer class="text-center py-8 border-t border-gray-300">
   <p class="opacity-60">© 2026 ZadyIQ - جميع الحقوق محفوظة</p>
-</footer><script>
+</footer>
+
+<script>
 // كشف الجهاز
 const isAndroid = /android/i.test(navigator.userAgent || navigator.vendor || window.opera);
 const downloadArea = document.getElementById('download-area');
 if (isAndroid) {
-  downloadArea.innerHTML = '<a href="https://github.com/Obaide67/Zady/raw/refs/heads/main/base%20(2)%20(2).apk" download class="inline-block"><button class="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-6 rounded-2xl shadow-xl">تحميل التطبيق الآن</button></a>';
+  downloadArea.innerHTML = '<a href="https://github.com/Obaide67/Zady/raw/refs/heads/main/base%20(2)%20(2).apk" download class="inline-block"><button class="btn-download bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-6 rounded-2xl shadow-xl">تحميل التطبيق الآن</button></a>';
 } else {
   downloadArea.innerHTML = '<div class="text-red-500 font-semibold mt-4">التطبيق متاح لأجهزة Android فقط 📱</div>';
 }
 
-// Toggle theme
+// تبديل الوضع الليلي / النهاري
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('bg-black');
   document.body.classList.toggle('text-white');
-  document.body.classList.toggle('bg-white');
-  document.body.classList.toggle('text-black');
+  document.body.classList.toggle('bg-gradient-to-b');
   themeBtn.textContent = themeBtn.textContent === '🌙' ? '☀️' : '🌙';
 });
-</script></body>
+</script>
+
+</body>
 </html>
